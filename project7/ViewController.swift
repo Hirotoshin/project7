@@ -9,16 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+ var timer:NSTimer = NSTimer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
+                                                       target: self,
+                                                       selector: #selector(ViewController.changeView),
+                                                       userInfo: nil,
+                                                       repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         //aaaaaa
+    }
+    
+    func changeView() {
+        self.performSegueWithIdentifier("second", sender: nil)
     }
 
 
