@@ -10,8 +10,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project7" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Xv0-XP-J1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZR-dO-EOv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -33,15 +33,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.5" y="136.5"/>
+            <point key="canvasLocation" x="-415.3125" y="134.68309859154928"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="ekT-BC-bVo">
             <objects>
                 <viewController id="oIg-rf-tEK" customClass="ViewController2" customModule="project7" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q7k-Vp-LGn"/>
-                        <viewControllerLayoutGuide type="bottom" id="d9c-ew-X0G"/>
+                        <viewControllerLayoutGuide type="top" id="nLG-44-D8e"/>
+                        <viewControllerLayoutGuide type="bottom" id="CD7-je-zn0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zep-TR-QVi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -50,13 +50,21 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="2Op-PA-Uxw"/>
+                                    <barButtonItem title="back" id="2Op-PA-Uxw"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xw6-KV-IXY"/>
-                                    <barButtonItem title="Item" id="HCU-Vf-rtA"/>
+                                    <barButtonItem systemItem="camera" id="HCU-Vf-rtA">
+                                        <connections>
+                                            <action selector="camera:" destination="oIg-rf-tEK" id="kSg-Wl-dys"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ovm-5X-4yP"/>
-                                    <barButtonItem title="Item" id="0aJ-Fi-jld"/>
+                                    <barButtonItem title="Item" systemItem="bookmarks" id="0aJ-Fi-jld">
+                                        <connections>
+                                            <action selector="cameraroll:" destination="oIg-rf-tEK" id="awr-3S-XFK"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HVD-8b-9lY"/>
-                                    <barButtonItem title="Item" id="dGo-SB-feB"/>
+                                    <barButtonItem title="Save" id="dGo-SB-feB"/>
                                     <barButtonItem id="ke0-6A-Hw3"/>
                                 </items>
                             </toolbar>
@@ -120,6 +128,9 @@
                         <outlet property="button2" destination="u9u-GH-kkg" id="JQv-LW-xBD"/>
                         <outlet property="button3" destination="Yvf-ux-SDK" id="3yk-be-ktD"/>
                         <outlet property="button4" destination="V2b-Jg-dhd" id="Tp6-gF-hsZ"/>
+                        <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
+                        <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
+                        <outlet property="imageview" destination="Z1C-b2-IQd" id="u7g-Cf-tcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYg-iP-UWz" userLabel="First Responder" sceneMemberID="firstResponder"/>

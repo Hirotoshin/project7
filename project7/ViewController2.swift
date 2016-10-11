@@ -8,15 +8,20 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var button1: UIButton!
-    
     @IBOutlet weak var button2: UIButton!
-    
     @IBOutlet weak var button3: UIButton!
-    
     @IBOutlet weak var button4: UIButton!
+    
+    @IBOutlet weak var cameraroll: UIBarButtonItem!
+    @IBOutlet weak var camera: UIBarButtonItem!
+    @IBOutlet weak var imageview: UIImageView!
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -60,6 +65,40 @@ class ViewController2: UIViewController {
         }
     }
  
+    @IBAction func cameraroll(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.sourceType = .PhotoLibrary
+        pickerController.delegate = self
+        self.presentViewController(pickerController, animated: true, completion: nil)
+    }
+    @IBAction func camera(sender: AnyObject) {
+        let sourceType:UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.Camera
+        // カメラが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            // インスタンスの作成
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.sourceType = sourceType
+            cameraPicker.delegate = self
+            self.presentViewController(cameraPicker, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func imagePickerController(imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageview.contentMode = .ScaleAspectFit
+            imageview.image = pickedImage
+        }
+        
+        //閉じる処理
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // 撮影がキャンセルされた時に呼ばれる
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     
