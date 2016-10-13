@@ -47,6 +47,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-xK-z2L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
+                            </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
@@ -69,10 +72,13 @@
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-fR-2wb">
-                                <rect key="frame" x="0.0" y="549" width="309" height="74"/>
+                                <rect key="frame" x="0.0" y="554" width="309" height="69"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oIg-rf-tEK" id="w08-UG-iqi"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-hd-ZrG">
                                 <rect key="frame" x="311" y="554" width="64" height="69"/>
@@ -81,10 +87,6 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-b2-IQd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-vq-ori">
                                 <rect key="frame" x="15" y="524" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -107,30 +109,40 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-Jg-dhd">
-                                <rect key="frame" x="309" y="524" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="317" y="524" width="30" height="30"/>
+                                <state key="normal" title="text"/>
                                 <connections>
-                                    <action selector="changebackground4:" destination="oIg-rf-tEK" eventType="touchUpInside" id="rlp-P0-Ied"/>
+                                    <action selector="drawGesture:" destination="oIg-rf-tEK" eventType="touchUpInside" id="j7B-9u-fD6"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-oV-dFw">
-                                <rect key="frame" x="0.0" y="516" width="375" height="3"/>
+                                <rect key="frame" x="0.0" y="517" width="375" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-b2-IQd">
+                                <rect key="frame" x="0.0" y="15" width="375" height="494"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="second"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0gU-xK-z2L" secondAttribute="trailing" id="BmQ-7F-OlL"/>
+                            <constraint firstItem="0gU-xK-z2L" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leading" id="kUW-ST-WS9"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="button1" destination="uyf-vq-ori" id="LaO-zP-DA7"/>
                         <outlet property="button2" destination="u9u-GH-kkg" id="JQv-LW-xBD"/>
                         <outlet property="button3" destination="Yvf-ux-SDK" id="3yk-be-ktD"/>
-                        <outlet property="button4" destination="V2b-Jg-dhd" id="Tp6-gF-hsZ"/>
+                        <outlet property="button4" destination="V2b-Jg-dhd" id="Wje-lB-IWT"/>
                         <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
                         <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
                         <outlet property="imageview" destination="Z1C-b2-IQd" id="u7g-Cf-tcR"/>
+                        <outlet property="scrollview" destination="0gU-xK-z2L" id="M2p-bH-ihz"/>
+                        <outlet property="textView" destination="bNs-fR-2wb" id="KRc-T8-8Uq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYg-iP-UWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
