@@ -19,8 +19,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraroll: UIBarButtonItem!
     @IBOutlet weak var camera: UIBarButtonItem!
     @IBOutlet weak var imageview: UIImageView!
-    @IBOutlet weak var textView: UITextView!
-
+    @IBOutlet weak var text: UITextView!
     @IBOutlet weak var UIview: UIView!
     
    
@@ -32,7 +31,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     var drawColor = UIColor()               //描画色の保存用
     
     let defaultLineWidth: CGFloat = 30.0    //デフォルトの線の太さ
-    
+    var txtActiveView: UITextView!//編集後のtextViewを新しく格納する変数を定義
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +52,10 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         testView.addSubview(closeButton)
         
         //キーボードのアクセサリにビューを設定する。
-        textView.inputAccessoryView = testView
+        //textView.inputAccessoryView = testView
         
         //テキストビューのデリゲート先にこのインスタンスを設定する。
-        textView.delegate = self
+        text.delegate = self
 
         scrollview.delegate = self
         scrollview.minimumZoomScale = 1.0                   // 最小拡大率
@@ -70,7 +69,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     //「閉じるボタン」で呼び出されるメソッド
     func onClickCloseButton(sender: UIButton) {
         //キーボードを閉じる
-        textView.resignFirstResponder()
+        text.resignFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -310,6 +309,70 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         
         return convertPoint
         
+    }
+
+    
+    
+    // Viewが画面に表示される度に呼ばれるメソッド
+    override func viewWillAppear(animated: Bool) {
+        // NSNotificationCenterへの登録処理
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: #selector(ViewController2.handleKeyboardWillShowNotification(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ViewController2.handleKeyboardWillHideNotification(_:)), name: UIKeyboardWillHideNotification, object: nil)
+    }
+    // Viewが非表示になるたびに呼び出されるメソッド
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // NSNotificationCenterの解除処理
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+    }
+    //画面がタップされた際にキーボードを閉じる処理
+    func tapGesture(sender: UITapGestureRecognizer) {
+        text.resignFirstResponder()
+        
+    }
+    //キーボードのreturnが押された際にキーボードを閉じる処理
+    func textViewShouldReturn(textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        //        itemMemo.resignFirstResponder()
+        return true
+    }
+    //textViewを編集する際に行われる処理
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        txtActiveView = textView //　編集しているtextViewを新しいtextView型の変数に代入する
+        return true
+    }
+    
+    //キーボードが表示された時
+    func handleKeyboardWillShowNotification(notification: NSNotification) {
+        //郵便入れみたいなもの
+        let userInfo = notification.userInfo!
+        //キーボードの大きさを取得
+        let keyboardRect = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        // 画面のサイズを取得
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        //　ViewControllerを基準にtextViewの下辺までの距離を取得
+        let txtLimit = txtActiveView.frame.origin.y + txtActiveView.frame.height + 8.0
+        // ViewControllerの高さからキーボードの高さを引いた差分を取得
+        let kbdLimit = myBoundSize.height - keyboardRect.size.height
+        
+        // こうすることで高さを確認できる（なくてもいい）
+        print("テキストフィールドの下辺：(\(txtLimit))")
+        print("キーボードの上辺：(\(kbdLimit))")
+        
+        //スクロールビューの移動距離設定
+        if txtLimit >= kbdLimit {
+            scrollview.contentOffset.y = txtLimit - kbdLimit
+        }
+    }
+    
+    
+    //ずらした分を戻す処理
+    func handleKeyboardWillHideNotification(notification: NSNotification) {
+        scrollview.contentOffset.y = 0
     }
 
     
