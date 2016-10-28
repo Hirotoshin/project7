@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -72,7 +72,11 @@
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-fR-2wb">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="554" width="309" height="69"/>
+=======
+                                <rect key="frame" x="10" y="550" width="355" height="73"/>
+>>>>>>> 3bdf3a97ec468e17765799c43406343679621a90
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -80,6 +84,7 @@
                                     <outlet property="delegate" destination="oIg-rf-tEK" id="w08-UG-iqi"/>
                                 </connections>
                             </textView>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-hd-ZrG">
                                 <rect key="frame" x="311" y="554" width="64" height="69"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,17 +102,27 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-GH-kkg">
                                 <rect key="frame" x="110" y="524" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-b2-IQd">
+                                <rect key="frame" x="10" y="20" width="355" height="466"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-GH-kkg">
+                                <rect key="frame" x="80" y="484" width="65" height="65"/>
+                                <state key="normal" image="StampPhysical.png"/>
+>>>>>>> 3bdf3a97ec468e17765799c43406343679621a90
                                 <connections>
                                     <action selector="changebackground2:" destination="oIg-rf-tEK" eventType="touchUpInside" id="L07-lq-ZHP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-ux-SDK">
-                                <rect key="frame" x="208" y="524" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-ux-SDK">
+                                <rect key="frame" x="155" y="484" width="65" height="65"/>
+                                <state key="normal" image="StumpCulture.png"/>
                                 <connections>
                                     <action selector="changebackground3:" destination="oIg-rf-tEK" eventType="touchUpInside" id="QQS-DE-mQ3"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-Jg-dhd">
                                 <rect key="frame" x="317" y="524" width="30" height="30"/>
                                 <state key="normal" title="text"/>
@@ -124,6 +139,15 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="494"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-vq-ori">
+                                <rect key="frame" x="5" y="484" width="65" height="65"/>
+                                <state key="normal" image="heart.png"/>
+                                <connections>
+                                    <action selector="changebackground:" destination="oIg-rf-tEK" eventType="touchUpInside" id="NLc-di-CYB"/>
+                                </connections>
+                            </button>
+>>>>>>> 3bdf3a97ec468e17765799c43406343679621a90
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="second"/>
@@ -137,7 +161,10 @@
                         <outlet property="button1" destination="uyf-vq-ori" id="LaO-zP-DA7"/>
                         <outlet property="button2" destination="u9u-GH-kkg" id="JQv-LW-xBD"/>
                         <outlet property="button3" destination="Yvf-ux-SDK" id="3yk-be-ktD"/>
+<<<<<<< HEAD
                         <outlet property="button4" destination="V2b-Jg-dhd" id="Wje-lB-IWT"/>
+=======
+>>>>>>> 3bdf3a97ec468e17765799c43406343679621a90
                         <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
                         <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
                         <outlet property="imageview" destination="Z1C-b2-IQd" id="u7g-Cf-tcR"/>
@@ -150,4 +177,9 @@
             <point key="canvasLocation" x="654.5" y="135.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="StampPhysical.png" width="1057" height="1057"/>
+        <image name="StumpCulture.png" width="1057" height="1057"/>
+        <image name="heart.png" width="509" height="509"/>
+    </resources>
 </document>
