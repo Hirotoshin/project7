@@ -52,10 +52,10 @@
                                 <rect key="frame" x="0.0" y="15" width="375" height="539"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-oV-dFw">
-                                        <rect key="frame" x="0.0" y="254" width="375" height="2"/>
+                                        <rect key="frame" x="0.0" y="504" width="375" height="2"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-zs-QzG">
-                                                <rect key="frame" x="0.0" y="285" width="317" height="69"/>
+                                                <rect key="frame" x="0.0" y="286" width="310" height="63"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -76,7 +76,7 @@
                                         </variation>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-b2-IQd">
-                                        <rect key="frame" x="0.0" y="-7" width="375" height="518"/>
+                                        <rect key="frame" x="0.0" y="-12" width="375" height="518"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
@@ -153,6 +153,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="second"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Uh-Tu-JcP" secondAttribute="trailing" id="1Rk-9G-oQg"/>
+                            <constraint firstItem="0Uh-Tu-JcP" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leadingMargin" id="6fE-KY-tm5"/>
                             <constraint firstItem="0gU-xK-z2L" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leadingMargin" id="934-fX-VgD"/>
                             <constraint firstItem="2Ft-oV-dFw" firstAttribute="width" secondItem="Zep-TR-QVi" secondAttribute="width" id="CF5-Gr-IlS"/>
                             <constraint firstItem="0Uh-Tu-JcP" firstAttribute="top" secondItem="0gU-xK-z2L" secondAttribute="bottom" id="PD6-5U-Roe"/>
