@@ -13,6 +13,9 @@
 		7D97BFD41D9E59C40092728F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97BFD31D9E59C40092728F /* ViewController.swift */; };
 		7D97BFD91D9E59C40092728F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D97BFD81D9E59C40092728F /* Assets.xcassets */; };
 		7D97BFDC1D9E59C40092728F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D97BFDA1D9E59C40092728F /* LaunchScreen.storyboard */; };
+		7DBEE35D1DC34BC1009A2151 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DBEE35A1DC34BC1009A2151 /* heart.png */; };
+		7DBEE35E1DC34BC1009A2151 /* StampPhysical.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DBEE35B1DC34BC1009A2151 /* StampPhysical.png */; };
+		7DBEE35F1DC34BC1009A2151 /* StumpCulture.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DBEE35C1DC34BC1009A2151 /* StumpCulture.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7D97BFD81D9E59C40092728F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D97BFDB1D9E59C40092728F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D97BFDD1D9E59C40092728F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DBEE35A1DC34BC1009A2151 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		7DBEE35B1DC34BC1009A2151 /* StampPhysical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StampPhysical.png; sourceTree = "<group>"; };
+		7DBEE35C1DC34BC1009A2151 /* StumpCulture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StumpCulture.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,9 @@
 		7D97BFC51D9E59C40092728F = {
 			isa = PBXGroup;
 			children = (
+				7DBEE35A1DC34BC1009A2151 /* heart.png */,
+				7DBEE35B1DC34BC1009A2151 /* StampPhysical.png */,
+				7DBEE35C1DC34BC1009A2151 /* StumpCulture.png */,
 				7D97BFD01D9E59C40092728F /* project7 */,
 				7D97BFCF1D9E59C40092728F /* Products */,
 			);
@@ -125,9 +134,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DBEE35D1DC34BC1009A2151 /* heart.png in Resources */,
 				7D40381A1DA7905100BE0C97 /* Main.storyboard in Resources */,
 				7D97BFDC1D9E59C40092728F /* LaunchScreen.storyboard in Resources */,
 				7D97BFD91D9E59C40092728F /* Assets.xcassets in Resources */,
+				7DBEE35F1DC34BC1009A2151 /* StumpCulture.png in Resources */,
+				7DBEE35E1DC34BC1009A2151 /* StampPhysical.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
