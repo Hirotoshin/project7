@@ -15,12 +15,14 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button5: UIButton!
     
     @IBOutlet weak var cameraroll: UIBarButtonItem!
     @IBOutlet weak var camera: UIBarButtonItem!
     @IBOutlet weak var imageview: UIImageView!
-    @IBOutlet weak var text: UITextView!
     @IBOutlet weak var UIview: UIView!
+    @IBOutlet weak var text: UITextView!
     
    
     @IBOutlet weak var scrollview: UIScrollView!
@@ -55,14 +57,14 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         //textView.inputAccessoryView = testView
         
         //テキストビューのデリゲート先にこのインスタンスを設定する。
-        text.delegate = self
+      /*  text.delegate = self
 
         scrollview.delegate = self
         scrollview.minimumZoomScale = 1.0                   // 最小拡大率
         scrollview.maximumZoomScale = 4.0                   // 最大拡大率
         scrollview.zoomScale = 1.0                          // 表示時の拡大率(初期値)
         
-        prepareDrawing()                                    //お絵描き準備
+        prepareDrawing()                                    //お絵描き準備*/
         
     }
     
@@ -100,7 +102,36 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         }
     }
    
+    //背景の色の変換
+    @IBAction func ChangeColor1(sender: UIButton) {
+        if self.button.backgroundColor == UIColor.yellowColor(){
+            self.view.backgroundColor = UIColor.yellowColor()
+            self.button.backgroundColor = UIColor.whiteColor()
+            self.text.backgroundColor = UIColor.yellowColor()
+            self.button5.backgroundColor = UIColor.purpleColor()
+        }else{
+            self.view.backgroundColor = UIColor.whiteColor()
+            self.button.backgroundColor = UIColor.yellowColor()
+            self.text.backgroundColor = UIColor.whiteColor()
+            self.button5.backgroundColor = UIColor.purpleColor()
+        }
+
+    }
     
+    @IBAction func ChangeColor2(sender: UIButton) {
+        if self.button5.backgroundColor == UIColor.purpleColor(){
+            self.view.backgroundColor = UIColor.purpleColor()
+            self.text.backgroundColor = UIColor.purpleColor()
+            self.button5.backgroundColor = UIColor.whiteColor()
+            self.button.backgroundColor = UIColor.yellowColor()
+        }else{
+            self.view.backgroundColor = UIColor.whiteColor()
+            self.text.backgroundColor = UIColor.whiteColor()
+            self.button5.backgroundColor = UIColor.purpleColor()
+            self.button.backgroundColor = UIColor.yellowColor()
+        }
+
+    }
     
     
     
