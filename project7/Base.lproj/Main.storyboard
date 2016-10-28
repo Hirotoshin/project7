@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -48,56 +47,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-xK-z2L">
-                                <rect key="frame" x="0.0" y="15" width="375" height="539"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-oV-dFw">
-                                        <rect key="frame" x="0.0" y="504" width="375" height="2"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-zs-QzG">
-                                                <rect key="frame" x="0.0" y="286" width="310" height="63"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="hu1-Px-G5Z"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="n35-Gt-X4I"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="hu1-Px-G5Z"/>
-                                                <exclude reference="n35-Gt-X4I"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-b2-IQd">
-                                        <rect key="frame" x="0.0" y="-12" width="375" height="518"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="2Ft-oV-dFw" firstAttribute="top" secondItem="0gU-xK-z2L" secondAttribute="top" id="DYF-7y-4Qe"/>
-                                    <constraint firstAttribute="bottom" secondItem="2Ft-oV-dFw" secondAttribute="bottom" id="VjM-GZ-GgD"/>
-                                    <constraint firstItem="2Ft-oV-dFw" firstAttribute="top" secondItem="0gU-xK-z2L" secondAttribute="top" id="ijZ-AO-19C"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DYF-7y-4Qe"/>
-                                        <exclude reference="VjM-GZ-GgD"/>
-                                        <exclude reference="ijZ-AO-19C"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="back" id="2Op-PA-Uxw"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xw6-KV-IXY"/>
                                     <barButtonItem systemItem="camera" id="HCU-Vf-rtA">
                                         <connections>
                                             <action selector="camera:" destination="oIg-rf-tEK" id="kSg-Wl-dys"/>
@@ -114,74 +66,41 @@
                                     <barButtonItem id="ke0-6A-Hw3"/>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-hd-ZrG">
-                                <rect key="frame" x="311" y="554" width="64" height="69"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-vq-ori">
-                                <rect key="frame" x="15" y="524" width="46" height="30"/>
-                                <state key="normal" title="face"/>
-                                <connections>
-                                    <action selector="changebackground:" destination="oIg-rf-tEK" eventType="touchUpInside" id="NLc-di-CYB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-GH-kkg">
-                                <rect key="frame" x="110" y="524" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="changebackground2:" destination="oIg-rf-tEK" eventType="touchUpInside" id="L07-lq-ZHP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-ux-SDK">
-                                <rect key="frame" x="208" y="524" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-ux-SDK">
+                                <rect key="frame" x="150" y="490" width="65" height="65"/>
+                                <state key="normal" image="heart.png"/>
                                 <connections>
                                     <action selector="changebackground3:" destination="oIg-rf-tEK" eventType="touchUpInside" id="QQS-DE-mQ3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-Jg-dhd">
-                                <rect key="frame" x="317" y="524" width="30" height="30"/>
-                                <state key="normal" title="text"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-vq-ori">
+                                <rect key="frame" x="72" y="489" width="65" height="65"/>
+                                <state key="normal" image="StampPhysical.png"/>
                                 <connections>
-                                    <action selector="drawGesture:" destination="oIg-rf-tEK" eventType="touchUpInside" id="j7B-9u-fD6"/>
+                                    <action selector="changebackground:" destination="oIg-rf-tEK" eventType="touchUpInside" id="NLc-di-CYB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-GH-kkg">
+                                <rect key="frame" x="0.0" y="490" width="65" height="65"/>
+                                <state key="normal" image="StumpCulture.png"/>
+                                <connections>
+                                    <action selector="changebackground2:" destination="oIg-rf-tEK" eventType="touchUpInside" id="L07-lq-ZHP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZj-1J-HLc">
+                                <rect key="frame" x="20" y="28" width="335" height="460"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" identifier="second"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Uh-Tu-JcP" secondAttribute="trailing" id="1Rk-9G-oQg"/>
-                            <constraint firstItem="0Uh-Tu-JcP" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leadingMargin" id="6fE-KY-tm5"/>
-                            <constraint firstItem="0gU-xK-z2L" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leadingMargin" id="934-fX-VgD"/>
-                            <constraint firstItem="2Ft-oV-dFw" firstAttribute="width" secondItem="Zep-TR-QVi" secondAttribute="width" id="CF5-Gr-IlS"/>
-                            <constraint firstItem="0Uh-Tu-JcP" firstAttribute="top" secondItem="0gU-xK-z2L" secondAttribute="bottom" id="PD6-5U-Roe"/>
-                            <constraint firstItem="0gU-xK-z2L" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leadingMargin" id="jIx-Ll-7DI"/>
-                            <constraint firstItem="0gU-xK-z2L" firstAttribute="leading" secondItem="Zep-TR-QVi" secondAttribute="leading" id="kUW-ST-WS9"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="934-fX-VgD"/>
-                                <exclude reference="jIx-Ll-7DI"/>
-                                <exclude reference="kUW-ST-WS9"/>
-                                <exclude reference="CF5-Gr-IlS"/>
-                                <exclude reference="PD6-5U-Roe"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="button1" destination="uyf-vq-ori" id="LaO-zP-DA7"/>
                         <outlet property="button2" destination="u9u-GH-kkg" id="JQv-LW-xBD"/>
                         <outlet property="button3" destination="Yvf-ux-SDK" id="3yk-be-ktD"/>
-                        <outlet property="button4" destination="V2b-Jg-dhd" id="Wje-lB-IWT"/>
                         <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
                         <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
-                        <outlet property="imageview" destination="Z1C-b2-IQd" id="u7g-Cf-tcR"/>
-                        <outlet property="scrollview" destination="0gU-xK-z2L" id="M2p-bH-ihz"/>
-                        <outlet property="text" destination="6f5-zs-QzG" id="8Sr-MY-YlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYg-iP-UWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,4 +108,9 @@
             <point key="canvasLocation" x="654.5" y="135.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="StampPhysical.png" width="1057" height="1057"/>
+        <image name="StumpCulture.png" width="1057" height="1057"/>
+        <image name="heart.png" width="509" height="509"/>
+    </resources>
 </document>
