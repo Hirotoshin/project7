@@ -50,8 +50,6 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="back" id="2Op-PA-Uxw"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xw6-KV-IXY"/>
                                     <barButtonItem systemItem="camera" id="HCU-Vf-rtA">
                                         <connections>
                                             <action selector="camera:" destination="oIg-rf-tEK" id="kSg-Wl-dys"/>
