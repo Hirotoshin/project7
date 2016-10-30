@@ -27,17 +27,19 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
    
     @IBOutlet weak var scrollview: UIScrollView!
     
-    var lastPoint: CGPoint?                 //直前のタッチ座標の保存用
-    var lineWidth: CGFloat?                 //描画用の線の太さの保存用
-    var bezierPath = UIBezierPath()         //お絵描きに使用
-    var drawColor = UIColor()               //描画色の保存用
+    //var lastPoint: CGPoint?                 //直前のタッチ座標の保存用
+   // var lineWidth: CGFloat?                 //描画用の線の太さの保存用
+   // var bezierPath = UIBezierPath()         //お絵描きに使用
+    //var drawColor = UIColor()               //描画色の保存用
     
-    let defaultLineWidth: CGFloat = 30.0    //デフォルトの線の太さ
-    var txtActiveView: UITextView!//編集後のtextViewを新しく格納する変数を定義
+    //let defaultLineWidth: CGFloat = 30.0    //デフォルトの線の太さ
+    //var txtActiveView: UITextView!//編集後のtextViewを新しく格納する変数を定義
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // textに枠を追加
+        text.layer.borderWidth = 0.3
+        text.layer.cornerRadius = 8
         
         //ビューを作成する。
         let testView = UIView()
@@ -54,12 +56,12 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         testView.addSubview(closeButton)
         
         //キーボードのアクセサリにビューを設定する。
-        //textView.inputAccessoryView = testView
+        text.inputAccessoryView = testView
         
         //テキストビューのデリゲート先にこのインスタンスを設定する。
-      /*  text.delegate = self
+      text.delegate = self
 
-        scrollview.delegate = self
+     /*   scrollview.delegate = self
         scrollview.minimumZoomScale = 1.0                   // 最小拡大率
         scrollview.maximumZoomScale = 4.0                   // 最大拡大率
         scrollview.zoomScale = 1.0                          // 表示時の拡大率(初期値)
@@ -181,7 +183,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     
     
     
-    
+  /*
     
     
     /**
@@ -406,7 +408,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         scrollview.contentOffset.y = 0
     }
 
-    
+    */
    
     
     
