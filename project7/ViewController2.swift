@@ -25,6 +25,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var text: UITextView!
     
    
+
     @IBOutlet weak var scrollview: UIScrollView!
     
     //var lastPoint: CGPoint?                 //直前のタッチ座標の保存用
@@ -409,6 +410,55 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     }
 
     */
+    
+    var txtActiveView = UITextView()
+    
+    func textViewShouldBeginEditing(textView: UITextView!) -> Bool {
+        txtActiveView = textView
+        return true
+    }
+    
+    func textViewShouldReturn(textView: UITextView!) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    func handleKeyboardWillShowNotification(notification: NSNotification) {
+        
+        let userInfo = notification.userInfo!
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        
+        let txtLimit = txtActiveView.frame.origin.y + txtActiveView.frame.height + 8.0
+        let kbdLimit = myBoundSize.height - keyboardScreenEndFrame.size.height
+        
+        print("テキストフィールドの下辺：(txtLimit)")
+        print("キーボードの上辺：(kbdLimit)")
+        
+        if txtLimit >= kbdLimit {
+            scrollview.contentOffset.y = txtLimit - kbdLimit
+        }
+    }
+    
+    func handleKeyboardWillHideNotification(notification: NSNotification) {
+        scrollview.contentOffset.y = 0
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+
    
     
     
