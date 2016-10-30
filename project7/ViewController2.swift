@@ -39,7 +39,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // textに枠を追加
         text.layer.borderWidth = 0.3
-        text.layer.cornerRadius = 8
+        text.layer.cornerRadius = 9
         
         //ビューを作成する。
         let testView = UIView()
