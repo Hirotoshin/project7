@@ -23,10 +23,14 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var UIview: UIView!
     @IBOutlet weak var text: UITextView!
+    @IBOutlet weak var refresh: UIBarButtonItem!
+    @IBOutlet weak var save: UIBarButtonItem!
     
    
 
     @IBOutlet weak var scrollview: UIScrollView!
+    
+    var alert:UIAlertController!
     
     //var lastPoint: CGPoint?                 //直前のタッチ座標の保存用
    // var lineWidth: CGFloat?                 //描画用の線の太さの保存用
@@ -35,6 +39,8 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     
     //let defaultLineWidth: CGFloat = 30.0    //デフォルトの線の太さ
     //var txtActiveView: UITextView!//編集後のtextViewを新しく格納する変数を定義
+    
+    var textViewString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +74,30 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         scrollview.zoomScale = 1.0                          // 表示時の拡大率(初期値)
         
         prepareDrawing()                                    //お絵描き準備*/
+        
+        //アラートコントローラーを作成する。
+        alert = UIAlertController(title: "画像の保存", message: "画像を保存します", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //「続けるボタン」のアラートアクションを作成する。
+        let alertAction = UIAlertAction(
+            title: "保存する",
+            style: UIAlertActionStyle.Default,
+            handler: { action in
+                
+               
+        })
+        
+        
+        //「キャンセルボタン」のアラートアクションを作成する。
+        let alertAction2 = UIAlertAction(
+            title: "キャンセル",
+            style: UIAlertActionStyle.Cancel,
+            handler: nil
+        )
+        
+        //アラートアクションを追加する。
+        alert.addAction(alertAction)
+        alert.addAction(alertAction2)
         
     }
     
@@ -459,8 +489,73 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
 
+    //画像とテキストの削除
+    @IBAction func refresher(sender: AnyObject) {
+        imageview.image = nil
+        imageview.setNeedsDisplay()
+        imageview.layoutIfNeeded()
+        textViewString = text.text!
+        text.text = ""
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.text.backgroundColor = UIColor.whiteColor()
+
+    }
    
     
+    func GetImage() -> UIImage {
+        
+        // キャプチャする範囲を取得.
+        let rect = self.view.bounds
+        
+        // ビットマップ画像のcontextを作成.
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        let context: CGContextRef = UIGraphicsGetCurrentContext()!
+        
+        // 対象のview内の描画をcontextに複写する.
+        self.view.layer.renderInContext(context)
+        
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+        
+        return capturedImage
+    }
+
+    @IBAction func saveimage(sender: AnyObject) {
+        
+        self.presentViewController(alert, animated: true, completion:nil)
+    
+        let capturedImage = GetImage() as UIImage     // キャプチャ画像を取得.
+        
+        imageview.image = capturedImage
+        
+        let image:UIImage! = imageview.image
+        
+        if image != nil {
+           UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        }
+        
+        imageview.image = nil
+        imageview.setNeedsDisplay()
+        imageview.layoutIfNeeded()
+        textViewString = text.text!
+        text.text = ""
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.text.backgroundColor = UIColor.whiteColor()
+
+
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutablePointer<Void>) {
+        print("1")
+        
+        if error != nil {
+            print(error.code)
+        }
+        
+    }
     
     
 }

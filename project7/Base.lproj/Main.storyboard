@@ -81,8 +81,18 @@
                                             <action selector="cameraroll:" destination="oIg-rf-tEK" id="awr-3S-XFK"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gcE-5s-JtU"/>
+                                    <barButtonItem title="refresh" id="sRc-bp-V4i">
+                                        <connections>
+                                            <action selector="refresher:" destination="oIg-rf-tEK" id="Dqb-4g-Qri"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HVD-8b-9lY"/>
-                                    <barButtonItem title="Save" id="dGo-SB-feB"/>
+                                    <barButtonItem title="Save" id="dGo-SB-feB">
+                                        <connections>
+                                            <action selector="saveimage:" destination="oIg-rf-tEK" id="4SX-rL-XyY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem id="ke0-6A-Hw3"/>
                                 </items>
                             </toolbar>
@@ -135,6 +145,8 @@
                         <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
                         <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
                         <outlet property="imageview" destination="QZj-1J-HLc" id="vIC-RY-Lhz"/>
+                        <outlet property="refresh" destination="sRc-bp-V4i" id="U33-C8-agS"/>
+                        <outlet property="save" destination="dGo-SB-feB" id="OlC-vP-FEj"/>
                         <outlet property="scrollview" destination="rBj-H6-g4d" id="HZL-0D-V0D"/>
                         <outlet property="text" destination="IzO-qv-gzz" id="Drb-BA-U5G"/>
                     </connections>
