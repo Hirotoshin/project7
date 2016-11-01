@@ -443,7 +443,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     
     var txtActiveView = UITextView()
     
-    func textViewShouldBeginEditing(textView: UITextView!) -> Bool {
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         txtActiveView = textView
         return true
     }
@@ -477,8 +477,8 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         super.viewWillAppear(animated)
         
         let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ViewController2.handleKeyboardWillShowNotification(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ViewController2.handleKeyboardWillHideNotification(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -534,7 +534,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         let image:UIImage! = imageview.image
         
         if image != nil {
-           UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
+           UIImageWriteToSavedPhotosAlbum(image, self, #selector(ViewController2.image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
         
         imageview.image = nil
