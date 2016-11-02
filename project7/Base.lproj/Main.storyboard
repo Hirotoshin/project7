@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -65,6 +65,15 @@
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                     </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-8Z-9Xz">
+                                        <rect key="frame" x="111" y="489" width="65" height="65"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTy-Sl-gh7">
+                                        <rect key="frame" x="20" y="490" width="65" height="65"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vu3-3Q-KHJ">
+                                        <rect key="frame" x="204" y="490" width="65" height="65"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-Tu-JcP">
@@ -98,21 +107,18 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-ux-SDK">
                                 <rect key="frame" x="204" y="490" width="65" height="65"/>
-                                <state key="normal" image="heart.png"/>
                                 <connections>
                                     <action selector="changebackground3:" destination="oIg-rf-tEK" eventType="touchUpInside" id="QQS-DE-mQ3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-vq-ori">
                                 <rect key="frame" x="111" y="489" width="65" height="65"/>
-                                <state key="normal" image="StampPhysical.png"/>
                                 <connections>
                                     <action selector="changebackground:" destination="oIg-rf-tEK" eventType="touchUpInside" id="NLc-di-CYB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-GH-kkg">
                                 <rect key="frame" x="20" y="490" width="65" height="65"/>
-                                <state key="normal" image="StumpCulture.png"/>
                                 <connections>
                                     <action selector="changebackground2:" destination="oIg-rf-tEK" eventType="touchUpInside" id="L07-lq-ZHP"/>
                                 </connections>
@@ -145,6 +151,9 @@
                         <outlet property="camera" destination="HCU-Vf-rtA" id="fCn-yl-8XQ"/>
                         <outlet property="cameraroll" destination="0aJ-Fi-jld" id="0pi-J3-w7K"/>
                         <outlet property="imageview" destination="QZj-1J-HLc" id="vIC-RY-Lhz"/>
+                        <outlet property="imageview1" destination="OeO-8Z-9Xz" id="IDl-W2-4vk"/>
+                        <outlet property="imageview2" destination="FTy-Sl-gh7" id="MIZ-7k-2pT"/>
+                        <outlet property="imageview3" destination="vu3-3Q-KHJ" id="HWh-s3-amU"/>
                         <outlet property="refresh" destination="sRc-bp-V4i" id="U33-C8-agS"/>
                         <outlet property="save" destination="dGo-SB-feB" id="OlC-vP-FEj"/>
                         <outlet property="scrollview" destination="rBj-H6-g4d" id="HZL-0D-V0D"/>
@@ -156,9 +165,4 @@
             <point key="canvasLocation" x="654.5" y="135.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="StampPhysical.png" width="1057" height="1057"/>
-        <image name="StumpCulture.png" width="1057" height="1057"/>
-        <image name="heart.png" width="509" height="509"/>
-    </resources>
 </document>

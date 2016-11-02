@@ -26,6 +26,9 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var refresh: UIBarButtonItem!
     @IBOutlet weak var save: UIBarButtonItem!
     
+    @IBOutlet weak var imageview1: UIImageView!
+    @IBOutlet weak var imageview2: UIImageView!
+    @IBOutlet weak var imageview3: UIImageView!
    
 
     @IBOutlet weak var scrollview: UIScrollView!
@@ -115,28 +118,50 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         //aaaaaa
     }
     
+     var count = 0 //countの設定
+    //スタンプphysical
     @IBAction func changebackground(sender: UIButton) {
-        if button1.backgroundColor == nil{
-            button1.backgroundColor = UIColor.purpleColor()
-        } else if button1.backgroundColor == UIColor.purpleColor() {
-            button1.backgroundColor = nil
+        
+        count = count + 1
+        if (count % 3 == 1){
+            imageview1.image = UIImage(named: "StampPhysical")
+        }else if (count % 3 == 2){
+            imageview1.image = UIImage(named: "Physical_Nega")
+        }else if (count % 3 == 0){
+            imageview1.image = UIImage(named: "Physical_none")
+        }else{
         }
     }
+    
+    var count2 = 0 //countの設定
+    //スタンプculture
     @IBAction func changebackground2(sender: UIButton) {
-        if button2.backgroundColor == nil{
-            button2.backgroundColor = UIColor.purpleColor()
-        } else if button2.backgroundColor == UIColor.purpleColor() {
-            button2.backgroundColor = nil
+        count2 = count2 + 1
+        if (count2 % 3 == 1){
+            imageview2.image = UIImage(named: "StumpCulture")
+        }else if (count2 % 3 == 2){
+            imageview2.image = UIImage(named: "地球崩壊")
+        }else if (count2 % 3 == 0){
+            imageview2.image = UIImage(named: "cluture未選択")
+        }else{
         }
     }
+    
+    var count3 = 0 //countの設定
+    //スタンプEmotion
     @IBAction func changebackground3(sender: AnyObject) {
-        if button3.backgroundColor == nil{
-            button3.backgroundColor = UIColor.purpleColor()
-        } else if button3.backgroundColor == UIColor.purpleColor() {
-            button3.backgroundColor = nil
+        count3 = count3 + 1
+        if (count3 % 3 == 1){
+            imageview3.image = UIImage(named: "heart")
+        }else if (count3 % 3 == 2){
+            imageview3.image = UIImage(named: "StumpEmotionBad")
+        }else if (count3 % 3 == 0){
+            imageview3.image = UIImage(named: "StumpEmotionGLAYc")
+        }else{
         }
     }
    
+    
     //背景の色の変換
     @IBAction func ChangeColor1(sender: UIButton) {
         if self.button.backgroundColor == UIColor.yellowColor(){
