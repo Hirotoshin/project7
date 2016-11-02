@@ -104,6 +104,11 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         
         text.text = "text"
         
+        
+        imageview1.image = UIImage(named: "Physical_none")
+        imageview2.image = UIImage(named: "cluture未選択")
+        imageview3.image = UIImage(named: "StumpEmotionGLAYc")
+        
     }
     
     //「閉じるボタン」で呼び出されるメソッド
@@ -525,6 +530,8 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         text.text = ""
         self.view.backgroundColor = UIColor.whiteColor()
         self.text.backgroundColor = UIColor.whiteColor()
+        self.button5.backgroundColor = UIColor.purpleColor()
+        self.button.backgroundColor = UIColor.yellowColor()
 
     }
    
@@ -571,6 +578,9 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         text.text = ""
         self.view.backgroundColor = UIColor.whiteColor()
         self.text.backgroundColor = UIColor.whiteColor()
+        self.button5.backgroundColor = UIColor.purpleColor()
+        self.button.backgroundColor = UIColor.yellowColor()
+
 
 
     }
