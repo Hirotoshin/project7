@@ -99,6 +99,8 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         alert.addAction(alertAction)
         alert.addAction(alertAction2)
         
+        text.text = "text"
+        
     }
     
     //「閉じるボタン」で呼び出されるメソッド
@@ -557,5 +559,9 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         
     }
     
-    
+    class ViewController: UIViewController {
+        override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+            view.endEditing(true)
+        }
+    }
 }
