@@ -532,6 +532,12 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         self.text.backgroundColor = UIColor.whiteColor()
         self.button5.backgroundColor = UIColor.purpleColor()
         self.button.backgroundColor = UIColor.yellowColor()
+        count = 0
+        count2 = 0
+        count3 = 0
+        imageview1.image = UIImage(named: "Physical_none")
+        imageview2.image = UIImage(named: "cluture未選択")
+        imageview3.image = UIImage(named: "StumpEmotionGLAYc")
 
     }
    
@@ -549,7 +555,7 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         self.view.layer.renderInContext(context)
         
         // 現在のcontextのビットマップをUIImageとして取得.
-        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         // contextを閉じる.
         UIGraphicsEndImageContext()
@@ -580,8 +586,12 @@ class ViewController2: UIViewController,UIImagePickerControllerDelegate, UINavig
         self.text.backgroundColor = UIColor.whiteColor()
         self.button5.backgroundColor = UIColor.purpleColor()
         self.button.backgroundColor = UIColor.yellowColor()
-
-
+        count = 0
+        count2 = 0
+        count3 = 0
+        imageview1.image = UIImage(named: "Physical_none")
+        imageview2.image = UIImage(named: "cluture未選択")
+        imageview3.image = UIImage(named: "StumpEmotionGLAYc")
 
     }
     

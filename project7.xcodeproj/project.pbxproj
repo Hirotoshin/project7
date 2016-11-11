@@ -11,10 +11,11 @@
 		5FBE43861DC50F6D00170D75 /* StumpEmotionBad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE43801DC50F6D00170D75 /* StumpEmotionBad.png */; };
 		5FBE43871DC50F6D00170D75 /* Physical_Nega.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE43811DC50F6D00170D75 /* Physical_Nega.png */; };
 		5FBE43881DC50F6D00170D75 /* Physical_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE43821DC50F6D00170D75 /* Physical_none.png */; };
-		5FBE43891DC50F6D00170D75 /* StumpEmotionGLAYc.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE43831DC50F6D00170D75 /* StumpEmotionGLAYc.png */; };
 		5FBE438A1DC50F6D00170D75 /* cluture未選択.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE43841DC50F6D00170D75 /* cluture未選択.png */; };
 		7D4038171DA78E6F00BE0C97 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4038161DA78E6F00BE0C97 /* ViewController2.swift */; };
 		7D40381A1DA7905100BE0C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4038181DA7905100BE0C97 /* Main.storyboard */; };
+		7D6ECBEA1DCB69AF003DE8E9 /* StumpEmotionGLAYc.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D6ECBE91DCB69AF003DE8E9 /* StumpEmotionGLAYc.png */; };
+		7D6ECBEC1DCB87DA003DE8E9 /* TopBlackfont-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D6ECBEB1DCB87DA003DE8E9 /* TopBlackfont-2.png */; };
 		7D97BFD21D9E59C40092728F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97BFD11D9E59C40092728F /* AppDelegate.swift */; };
 		7D97BFD41D9E59C40092728F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97BFD31D9E59C40092728F /* ViewController.swift */; };
 		7D97BFD91D9E59C40092728F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D97BFD81D9E59C40092728F /* Assets.xcassets */; };
@@ -29,10 +30,11 @@
 		5FBE43801DC50F6D00170D75 /* StumpEmotionBad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StumpEmotionBad.png; sourceTree = "<group>"; };
 		5FBE43811DC50F6D00170D75 /* Physical_Nega.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Physical_Nega.png; sourceTree = "<group>"; };
 		5FBE43821DC50F6D00170D75 /* Physical_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Physical_none.png; sourceTree = "<group>"; };
-		5FBE43831DC50F6D00170D75 /* StumpEmotionGLAYc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StumpEmotionGLAYc.png; sourceTree = "<group>"; };
 		5FBE43841DC50F6D00170D75 /* cluture未選択.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cluture未選択.png"; sourceTree = "<group>"; };
 		7D4038161DA78E6F00BE0C97 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		7D4038191DA7905100BE0C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D6ECBE91DCB69AF003DE8E9 /* StumpEmotionGLAYc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StumpEmotionGLAYc.png; sourceTree = "<group>"; };
+		7D6ECBEB1DCB87DA003DE8E9 /* TopBlackfont-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TopBlackfont-2.png"; sourceTree = "<group>"; };
 		7D97BFCE1D9E59C40092728F /* project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D97BFD11D9E59C40092728F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D97BFD31D9E59C40092728F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,15 +60,16 @@
 		7D97BFC51D9E59C40092728F = {
 			isa = PBXGroup;
 			children = (
+				7D6ECBEB1DCB87DA003DE8E9 /* TopBlackfont-2.png */,
 				5FBE437F1DC50F6D00170D75 /* 地球崩壊.png */,
-				5FBE43801DC50F6D00170D75 /* StumpEmotionBad.png */,
-				5FBE43811DC50F6D00170D75 /* Physical_Nega.png */,
 				5FBE43821DC50F6D00170D75 /* Physical_none.png */,
-				5FBE43831DC50F6D00170D75 /* StumpEmotionGLAYc.png */,
-				5FBE43841DC50F6D00170D75 /* cluture未選択.png */,
-				7DBEE35A1DC34BC1009A2151 /* heart.png */,
 				7DBEE35B1DC34BC1009A2151 /* StampPhysical.png */,
+				5FBE43811DC50F6D00170D75 /* Physical_Nega.png */,
+				5FBE43841DC50F6D00170D75 /* cluture未選択.png */,
 				7DBEE35C1DC34BC1009A2151 /* StumpCulture.png */,
+				7D6ECBE91DCB69AF003DE8E9 /* StumpEmotionGLAYc.png */,
+				7DBEE35A1DC34BC1009A2151 /* heart.png */,
+				5FBE43801DC50F6D00170D75 /* StumpEmotionBad.png */,
 				7D97BFD01D9E59C40092728F /* project7 */,
 				7D97BFCF1D9E59C40092728F /* Products */,
 			);
@@ -121,11 +124,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = hirotoshin;
 				TargetAttributes = {
 					7D97BFCD1D9E59C40092728F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3G832QTKGX;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -152,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6ECBEA1DCB69AF003DE8E9 /* StumpEmotionGLAYc.png in Resources */,
 				5FBE43881DC50F6D00170D75 /* Physical_none.png in Resources */,
 				7DBEE35D1DC34BC1009A2151 /* heart.png in Resources */,
 				5FBE43861DC50F6D00170D75 /* StumpEmotionBad.png in Resources */,
@@ -160,8 +166,8 @@
 				5FBE438A1DC50F6D00170D75 /* cluture未選択.png in Resources */,
 				7D40381A1DA7905100BE0C97 /* Main.storyboard in Resources */,
 				7D97BFDC1D9E59C40092728F /* LaunchScreen.storyboard in Resources */,
-				5FBE43891DC50F6D00170D75 /* StumpEmotionGLAYc.png in Resources */,
 				7D97BFD91D9E59C40092728F /* Assets.xcassets in Resources */,
+				7D6ECBEC1DCB87DA003DE8E9 /* TopBlackfont-2.png in Resources */,
 				7DBEE35F1DC34BC1009A2151 /* StumpCulture.png in Resources */,
 				7DBEE35E1DC34BC1009A2151 /* StampPhysical.png in Resources */,
 			);
@@ -216,8 +222,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -261,8 +269,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -281,6 +291,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -289,11 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3G832QTKGX;
 				INFOPLIST_FILE = project7/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hirotoshin.project7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -302,11 +315,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3G832QTKGX;
 				INFOPLIST_FILE = project7/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hirotoshin.project7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
